@@ -1,9 +1,9 @@
 numbers_dictionary = {}
-line = input()
 
+line = input()
 while line != "Search":
-    number_as_string = line
     try:
+        number_as_string = line
         number = int(input())
         numbers_dictionary[number_as_string] = number
     except ValueError:
@@ -12,16 +12,19 @@ while line != "Search":
 
 line = input()
 while line != "Remove":
-    searched = line
-    print(numbers_dictionary.get(searched, "Number does not exist in dictionary"))
+    try:
+        searched = line
+        print(numbers_dictionary[searched])
+    except KeyError:
+        print("Number does not exist in dictionary")
     line = input()
 
 line = input()
 while line != "End":
-    searched = line
-    if searched in numbers_dictionary:
+    try:
+        searched = line
         del numbers_dictionary[searched]
-    else:
+    except KeyError:
         print("Number does not exist in dictionary")
     line = input()
 
