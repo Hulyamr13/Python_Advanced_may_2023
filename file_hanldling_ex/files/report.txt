@@ -1,0 +1,12 @@
+.css
+- - - ./files\test\index.css
+.js
+- - - ./files\test\index.js
+.py
+- - - ./files\test\hello.py
+- - - ./files\test\index.css.py
+.txt
+- - - ./files\file.txt
+- - - ./files\output.txt
+- - - ./files\report.txt
+- - - ./files\text.txt
