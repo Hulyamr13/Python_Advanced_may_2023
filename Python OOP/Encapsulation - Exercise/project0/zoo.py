@@ -16,7 +16,7 @@ class Zoo:
         if self.__budget < price:
             return "Not enough budget"
         if self.__animal_capacity == len(self.animals):
-            return "Not enough space for animal"
+            return "Not enough space for animals0"
 
         self.animals.append(animal)
         self.__budget -= price
@@ -55,11 +55,11 @@ class Zoo:
         animals_cost = sum(a.money_for_care for a in self.animals)
 
         if self.__budget < animals_cost:
-            return "You have no budget to tend the animals. They are unhappy."
+            return "You have no budget to tend the animals0. They are unhappy."
 
         self.__budget -= animals_cost
 
-        return f"You tended all the animals. They are happy. Budget left: {self.__budget}"
+        return f"You tended all the animals0. They are happy. Budget left: {self.__budget}"
 
     def profit(self, amount):
         self.__budget += amount
@@ -70,7 +70,7 @@ class Zoo:
         cheetahs = list(filter(lambda a: a.__class__.__name__ == "Cheetah", self.animals))
 
         result = [
-            f"You have {len(self.animals)} animals",
+            f"You have {len(self.animals)} animals0",
             f"----- {len(lions)} Lions:",
         ]
         result.extend(lions)

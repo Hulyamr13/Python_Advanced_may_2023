@@ -34,7 +34,7 @@ workers = [
     Vet("Sam", 29, 220)
 ]
 
-# Adding all animals
+# Adding all animals0
 for i in range(len(animals)):
     animal = animals[i]
     price = prices[i]
@@ -44,7 +44,7 @@ for i in range(len(animals)):
 for worker in workers:
     print(zoo.hire_worker(worker))
 
-# Tending animals
+# Tending animals0
 print(zoo.tend_animals())
 
 # Paying keepers
