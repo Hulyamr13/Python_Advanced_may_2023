@@ -1,5 +1,5 @@
-SELECT apartments.name, SUM(bookings.booked_for)
-FROM apartments
-INNER JOIN bookings ON bookings.apartment_id = apartments.apartment_id
-GROUP BY apartments.name
-ORDER BY apartments.name ASC;
+SELECT a.name, SUM(b.booked_for) AS total_bookings
+FROM apartments AS a
+JOIN bookings AS b ON a.apartment_id = b.apartment_id
+GROUP BY a.name
+ORDER BY a.name;
