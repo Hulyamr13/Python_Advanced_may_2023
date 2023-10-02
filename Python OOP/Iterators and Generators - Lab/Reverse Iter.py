@@ -1,4 +1,4 @@
-class reverse_iter:
+class ReverseIter:
     def __init__(self, iterable):
         self.iterable = iterable
         self.index = len(iterable) - 1
@@ -15,6 +15,6 @@ class reverse_iter:
             raise StopIteration
 
 # Example usage
-reversed_list = reverse_iter([1, 2, 3, 4])
+reversed_list = ReverseIter([1, 2, 3, 4])
 for item in reversed_list:
     print(item)
